@@ -19,12 +19,12 @@ public class A {
 		Vector<Character> karakter = new Vector<>();
 		int n = 0;
 		while (sc.hasNext()) {
-			char masuk = sc.next().charAt(0);
-			if (masuk >= 'A' && masuk <= 'Z') {
-				karakter.add(masuk);
+			String masuk = sc.next();
+			if (masuk.charAt(0) >= 'A' && masuk.charAt(0) <= 'Z') {
+				karakter.add(masuk.charAt(0));
 			}
-			{
-				n = masuk - '0';
+			else {
+				n = Integer.valueOf(masuk);
 			}
 		}
 		int karSize = karakter.size();
